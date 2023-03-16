@@ -1,34 +1,34 @@
 ---
 # Display name
-title: Alice Wu 吳恩達
+title: Ланцова Яна
 
 # Full name (for SEO)
-first_name: Alice
-last_name: Wu
+first_name: Яна
+last_name: Ланцова
 
 # Status emoji
-status:
-  icon: ☕️
+status: 
+  icon: 😽
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Professor of Artificial Intelligence
+role: Студент
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Stanford University
-    url: https://www.stanford.edu/
+  - name: Российский Университет Дружбы Народов
+    url: https://www.rudn.ru
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: Я изучаю различные языки программирования, такие как C++, Java, Python.
 
 # Interests to show in About widget
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Программирование
+  - Рисование
+  - Кулинария
 
 # Education to show in About widget
 education:
@@ -80,5 +80,5 @@ email: ''
 highlight_name: true
 ---
 
-Alice Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Ланцова Яна является студенткой первого курса Российского Университета Дружбы Народов. Она изучает различные языки программирования, увлекается математикой.
 {style="text-align: justify;"}
