@@ -9,10 +9,10 @@ summary: LaTEX представляет собой инструмент для �
 projects: []
 
 # Date published
-date: '2023-04-13T00:00:00Z'
+date: '2023-04-05T00:00:00Z'
 
 # Date updated
-lastmod: '2023-04-13T00:00:00Z'
+lastmod: '2023-04-05T00:00:00Z'
 
 # Is this an unpublished draft?
 draft: false
