@@ -51,27 +51,21 @@ social:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
-  - icon: twitter
+  - icon: linkedin
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
+    link: https://www.elibrary.ru/project_user_office.asp
     label: Follow me on Twitter
     display:
       header: true
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+    link: https://scholar.google.com/citations?hl=ru&user=bLUwt68AAAAJ&view_op=list_works&gmla=ABEO0YoFxLKAIJNNpN57qgJ3pU8Af7_tzQJo8SVVSn_Bny6TOxkPMK__QTnHt3XMg2qD5Ug2H6KBNOoNqfB2KHNvDNntQqWNbAnLU7R8I9a_Jw
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
-  - icon: linkedin
+    link: https:https://github.com/yilancova
+  - icon: google
     icon_pack: fab
-    link: https://www.linkedin.com/
-  # Link to a PDF of your resume/CV.
-  # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
-  # and uncomment the lines below.
-  - icon: cv
-    icon_pack: ai
-    link: uploads/resume.pdf
+    link: https:https://independent.academia.edu/YalayanBean
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
@@ -80,6 +74,6 @@ email: ''
 highlight_name: true
 ---
 
-Ланцова Яна является студенткой первого курса Российского Университета Дружбы Народов. Она изучает различные языки программирования, увлекается математикой.
+Ланцова Яна - студентка первого курса бакалавриата Российского Университета Дружбы Народов. Изучаю различные языки программирования, увлекаюсь математикой.
 {style="text-align: justify;"}
 

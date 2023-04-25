@@ -204,10 +204,10 @@ sections:
         - 'Monday 10:00 to 13:00'
         - 'Wednesday 09:00 to 10:00'
       contact_links:
-        - icon: twitter
+        - icon: eLibrary
           icon_pack: fab
           name: DM Me
-          link: 'https://twitter.com/Twitter'
+          link: 'https://www.elibrary.ru/project_user_office.asp'
         - icon: skype
           icon_pack: fab
           name: Skype Me
