@@ -18,7 +18,7 @@ sections:
       title: Skills
       items:
         - name: English
-          description: 2%
+          description: 20%
           icon: language
           icon_pack: fas
         - name: Programming
@@ -45,7 +45,7 @@ sections:
           company: RUDN
           company_url: 'https://www.rudn.ru'
           company_logo: org-gc
-          location: California
+          location: Russia
           date_start: '2022-09-01'
           date_end: ''
           description: |2-
@@ -189,13 +189,13 @@ sections:
       text: |-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
       # Contact (add or remove contact options as necessary)
-      email: test@example.org
-      phone: 888 888 88 88
+      email: yalantsova@gmail.com
+      phone: 8 978 662 4419
       appointment_url: 'https://calendly.com'
       address:
-        street: 450 Serra Mall
-        city: Stanford
-        region: CA
+        street: Pushkinskaya
+        city: Moscow
+        region: Russia
         postcode: '94305'
         country: United States
         country_code: US

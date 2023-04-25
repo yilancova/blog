@@ -8,7 +8,7 @@ last_name: Ланцова
 
 # Status emoji
 status: 
-  icon: 😽
+  icon: ✨
 
 # Is this the primary user of the site?
 superuser: true
@@ -51,29 +51,29 @@ social:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
-  - icon: linkedin
+  - icon: facebook
     icon_pack: fab
     link: https://www.elibrary.ru/project_user_office.asp
-    label: Follow me on Twitter
+    label: Follow me on Elibrary
     display:
       header: true
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
-    link: https://scholar.google.com/citations?hl=ru&user=bLUwt68AAAAJ&view_op=list_works&gmla=ABEO0YoFxLKAIJNNpN57qgJ3pU8Af7_tzQJo8SVVSn_Bny6TOxkPMK__QTnHt3XMg2qD5Ug2H6KBNOoNqfB2KHNvDNntQqWNbAnLU7R8I9a_Jw
+    link: https://independent.academia.edu/YalayanBean
   - icon: github
     icon_pack: fab
-    link: https:https://github.com/yilancova
+    link: https://github.com/yilancova
   - icon: google
     icon_pack: fab
-    link: https:https://independent.academia.edu/YalayanBean
+    link: https://scholar.google.com/citations?hl=ru&user=bLUwt68AAAAJ&view_op=list_works&gmla=ABEO0YoFxLKAIJNNpN57qgJ3pU8Af7_tzQJo8SVVSn_Bny6TOxkPMK__QTnHt3XMg2qD5Ug2H6KBNOoNqfB2KHNvDNntQqWNbAnLU7R8I9a_Jw
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ''
+email: 'yalantsova@gmail.com'
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
 
-Ланцова Яна - студентка первого курса бакалавриата Российского Университета Дружбы Народов. Изучаю различные языки программирования, увлекаюсь математикой.
+Два билета на барби, пожалуйста.
 {style="text-align: justify;"}
 
