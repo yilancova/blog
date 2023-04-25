@@ -51,8 +51,8 @@ social:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
-  - icon: facebook
-    icon_pack: fab
+  - icon: file
+    icon_pack: fas
     link: https://www.elibrary.ru/project_user_office.asp
     label: Follow me on Elibrary
     display:

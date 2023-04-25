@@ -5,6 +5,18 @@ date: 2022-10-24
 type: landing
 
 sections:
+
+  - block: markdown
+    design:
+     background:
+      image:
+       filename: 1.jpg
+       filters:
+        brightness: 1
+       size: cover
+       position: center
+       parallax: false
+        
   
   - block: about.avatar
     id: about
@@ -15,23 +27,23 @@ sections:
       text:
   - block: features
     content:
-      title: Skills
+      title: Увлечения
       items:
-        - name: English
+        - name: Английский язык
           description: 20%
           icon: language
           icon_pack: fas
-        - name: Programming
+        - name: Программирование
           description: 70%
           icon: keyboard
           icon_pack: fas
-        - name: Photography
+        - name: Рисование
           description: 10%
-          icon: camera-retro
+          icon: pen
           icon_pack: fas
   - block: experience
     content:
-      title: Experience
+      title: Опыт
       # Date format for experience
       #   Refer to https://wowchemy.com/docs/customization/#date-format
       date_format: Jan 2006
@@ -41,11 +53,11 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Student
-          company: RUDN
+        - title: Студент
+          company: РУДН
           company_url: 'https://www.rudn.ru'
-          company_logo: org-gc
-          location: Russia
+          company_logo: org-rudn
+          location: Россия
           date_start: '2022-09-01'
           date_end: ''
           description: |2-
@@ -55,10 +67,10 @@ sections:
         
     design:
       columns: '2'
-  - block: accomplishments
+  - block: Accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
+      title: 'Достижения'
       subtitle:
       # Date format: https://wowchemy.com/docs/customization/#date-format
       date_format: Jan 2006
@@ -68,13 +80,13 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
+        - certificate_url: https://www.coursera.org/learn/neural-networks-deep-learning
           date_end: ''
-          date_start: '2022-01-25'
-          description: ''
+          date_start: '2023-01-25'
+          description: 'К концу курса я лучше познакомилась с важными технологическими тенденциями.'
           organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
+          organization_url: https://www.stepik.org
+          title: Нейронные сети и глубокое обучение
           url: ''
         
     design:
@@ -82,7 +94,7 @@ sections:
   - block: collection
     id: posts
     content:
-      title: Recent Posts
+      title: Посты
       subtitle: ''
       text: ''
       # Choose how many pages you would like to display (0 = all pages)
@@ -109,7 +121,7 @@ sections:
   - block: portfolio
     id: projects
     content:
-      title: Projects
+      title: Проекты
       filters:
         folders:
           - project
@@ -135,7 +147,7 @@ sections:
       flip_alt_rows: false
   - block: markdown
     content:
-      title: Gallery
+      title: Галерея
       subtitle: ''
       text: |-
         {{< gallery album="demo" >}}
@@ -144,7 +156,7 @@ sections:
   - block: collection
     id: featured
     content:
-      title: Featured Publications
+      title: Недавние публикации
       filters:
         folders:
           - publication
@@ -154,7 +166,7 @@ sections:
       view: card
   - block: collection
     content:
-      title: Recent Publications
+      title: Поиск публикации
       text: |-
         {{% callout note %}}
         Quickly discover relevant content by [filtering publications](./publication/).
@@ -166,21 +178,6 @@ sections:
     design:
       columns: '2'
       view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
-    design:
-      columns: '2'
-      view: compact
-  - block: tag_cloud
-    content:
-      title: Popular Topics
-    design:
-      columns: '2'
   - block: contact
     id: contact
     content:
