@@ -61,9 +61,9 @@ sections:
           date_start: '2022-09-01'
           date_end: ''
           description: |2-
-              Responsibilities include:
+              Направление:
 
-              * Mathematics and computer science
+              * Фундаментальная информатика и информационные технологии
         
     design:
       columns: '2'
