@@ -1,41 +1,82 @@
 ---
-title: Example Project
-summary: An example of using the in-built project page.
+title: Реализация класса Вектор
+summary: В данной проектной работе я расскажу как я написала класс Вектор на языке С++
 tags:
-  - Deep Learning
-date: '2016-04-27T00:00:00Z'
+  - Программирование
+date: '2022-04-27T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
 external_link: ''
 
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: На фото мой макбук за 1000000$
   focal_point: Smart
-
-links:
-  - icon: twitter
-    icon_pack: fab
-    name: Follow
-    url: https://twitter.com/georgecushen
-url_code: ''
-url_pdf: ''
-url_slides: ''
-url_video: ''
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+- Что нужно знать для реализации?
 
-Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.
+1. Указатели
+2. Move семантика (Дополнительный этап)
+3. rValue и lValue ссылки (Дополнительный этап)
+4. Шаблоны
+5. Итераторы (Дополнительный этап)
+6. Переопределение операторов
 
-Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.
+- Введение
 
-Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.
+Я буду использовать c++20. Также эта статья разбита на этапы:
+Первый и второй этапы обязательны. Данный гайд предназначен для новичков
 
-Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.
+- Первый этап
+
+Для начала нужно создать шаблонный класс. Для этого используется template. Далее определяем какие поля будет содержать класс: 
+
+1. Указатель на область памяти, где будет находиться массив.
+2. Размер вектора (size)
+3. Максимальный размер вектора (capacity)
+
+С первым и вторым пунктом всё понятно. А для чего нужен третий? Отвечая на этот вопрос, нужно вспомнить, что вектор - это динамический массив. Поэтому, чтобы каждый раз, при добавлении элемента, не выделять новую память, нужно выделить её с запасом. Также надо добавить конструктор класса.
+
+- Второй этап
+
+Теперь нужно добавить эти методы:
+1) Метод, который проверяет пустой ли список: [[nodiscard]] bool isEmpty() const {
+		return size_ == 0;
+}
+2) Метод получения размера вектора:
+[[nodiscard]] size_t size() const {
+		return size_;
+}
+3) Метод получения максимального размера вектора:
+[[nodiscard]] size_t capacity() const {
+		return capacity_;
+}
+4) Метод выделения новой памяти. Мы будем создавать новый массив arr_ с размером capacity * 2, чтобы выделять память с запасом. Но перед этим надо записать предыдущий массив arr_ в другой указатель tmp. Затем заполняем свободные ячейки массива arr_ ячейками tmp. Не забываем удалить указатель tmp, чтобы не было утечки памяти.
+void addMemory() {
+		capacity_ *= 2;
+    T* tmp = arr_;
+    arr_ = new T[capacity_];
+    for (size_t i = 0; i < size_; ++i) arr_[i] = tmp[i];
+    delete[] tmp;
+}
+5) Метод добавления элемента
+Для начало нужно проверить - есть ли свободные ячейки. Если их нет вызываем addMemory(). Далее записываем элемент в индекс size_ и увеличиваем size_ на 1.
+void pushBack(const T& value) {
+		if (size_ >= capacity_) addMemory();
+    arr_[size_++] = value;
+}
+6) Метод удаления элемента
+Здесь нужно уточнить, что у этого метода будет один аргумент - индекс элемента, который нужно удалить.
+Чтобы удалить элемент в начале или в середине, нужно переместить все элементы, которые правее данного, на 1 ячейку. А затем уменьшить size_ на 1. Если же этот элемент находиться в конце массива, мы просто уменьшаем size_ на 1.
+void remove(size_t index) {
+		for (size_t i = index + 1; i < size_; ++i) {
+    		arr_[i - 1] = arr_[i];
+    }
+    --size_;
+}

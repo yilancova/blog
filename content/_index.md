@@ -118,6 +118,19 @@ sections:
       # Choose a layout view
       view: compact
       columns: '2'
+  - block: markdown
+    id: jokes
+    content:
+      title: Анекдоты
+      subtitle: ''
+      text: |- 
+        ### Анекдот 1
+        Идёт Райан Гослинг по лесу, видит: машина стоит. Сел в неё, подождал ровно 5 минут и уехал.
+        
+        ### Анекдот 2
+        Приходит мужик в бар и заказывает у бармена кофе. Бармен говорит: "Извините, у нас здесь нет кофе, но у нас есть энергетические напитки, они тоже содержат кофеин". Мужик говорит: "Ладно, дайте мне тогда энергетик". Бармен готовит напиток и говорит: "Вот ваш энергетик, но будьте осторожны, он очень сильный". Мужик выпивает напиток и начинает чувствовать себя очень энергичным и бодрым. Он решает пойти на пробежку и начинает бегать по городу, обгоняя всех прохожих. Вдруг он видит Райана Гослинга и кричит ему: "Райан, я тебя обгоняю!". Гослинг смотрит на него и говорит: "Ну и что? Я не бегаю для того, чтобы быть первым. Я бегаю для того, чтобы выглядеть красиво".
+    design:
+      columns: '2'
   - block: portfolio
     id: projects
     content:
@@ -133,12 +146,12 @@ sections:
       # To filter by a specific tag, set `tag` to an existing tag name.
       # To remove the toolbar, delete the entire `filter_button` block.
       buttons:
-        - name: All
+        - name: Все
           tag: '*'
-        - name: Deep Learning
-          tag: Deep Learning
-        - name: Other
-          tag: Demo
+        - name: Программирование
+          tag: Программирование
+        - name: Другое
+          tag: другое
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '1'
@@ -153,65 +166,28 @@ sections:
         {{< gallery album="demo" >}}
     design:
       columns: '1'
-  - block: collection
-    id: featured
-    content:
-      title: Недавние публикации
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      columns: '2'
-      view: card
-  - block: collection
-    content:
-      title: Поиск публикации
-      text: |-
-        {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
-        {{% /callout %}}
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: citation
   - block: contact
     id: contact
     content:
-      title: Contact
+      title: Контакты
       subtitle:
       text: |-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
+        Если есть вопросы к сайту, направьте мне их в письменном виде на почту.
       # Contact (add or remove contact options as necessary)
       email: yalantsova@gmail.com
       phone: 8 978 662 4419
-      appointment_url: 'https://calendly.com'
       address:
-        street: Pushkinskaya
-        city: Moscow
-        region: Russia
+        street: Пушкинская
+        city: Москва
+        region: Московская область
         postcode: '94305'
-        country: United States
-        country_code: US
-      directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-      office_hours:
-        - 'Monday 10:00 to 13:00'
-        - 'Wednesday 09:00 to 10:00'
+        country: Россия
+        country_code: РФ
+      directions: Войдите в 1 подъезд и поднимитесь на 7 этаж
       contact_links:
-        - icon: eLibrary
-          icon_pack: fab
-          name: DM Me
-          link: 'https://www.elibrary.ru/project_user_office.asp'
-        - icon: skype
-          icon_pack: fab
-          name: Skype Me
-          link: 'skype:echo123?call'
         - icon: video
           icon_pack: fas
-          name: Zoom Me
+          name: Коференция в zoom
           link: 'https://zoom.com'
       # Automatically link email and phone or display as text?
       autolink: true
